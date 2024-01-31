@@ -1,29 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rubik";
     flex-direction: column;
 }
 #header {
     margin: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+#newBook {
+    border-radius: 50%;
+    width: 50px;
+    font-size: 35px;
+    background-color: rgba(202, 37, 37, 0.59);
+    height: 50px;
+    border: 1px solid;
+}
+#newBook:hover {
+    background-color: black;
+    color: white;
+}
 #library {
-    min-width: 800px;
-    min-height: 500px;
-    background-color: aqua;
+    max-width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(202, 37, 37, 0.59);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.426);
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(auto-fit, 400px);
     gap: 20px;
 }
-#library div {
-    border: 1px solid black;
-    height: 200px;
+#library>div {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.314);
+    height: 300px;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#library>div>div {
+    border: 4px solid rgb(35, 76, 138);
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    text-align: left;
 }
 
-#library button {
-    background-color: red;
+.read{
+    background-color: rgb(51, 109, 197);
+    color: white;
+
+}
+.read:hover{
+    background-color: rgb(35, 76, 138);
+}
+.read ,.delete {
+    font-size: large;
+    font-weight: 900;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.426);
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+}
+.delete {
+    background-color: rgb(239, 83, 83);
+}
+.delete:hover {
+    background-color: rgb(239, 57, 57);
+}
+dialog {
+    border-radius: 10px;
+    border: 4px solid rgba(202, 37, 37, 0.59);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: large;
+    font-weight: 600;
+    gap: 20px;
+    align-items: center;
+}
+#title,#author,#pages {
+    width: 150px;
+    height: 25px;
+    border :1px rgb(35, 76, 138) solid;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+    padding-left: 5px;
+    
+}
+#title:focus, #author:focus, #pages:focus {
+    outline-color: rgb(35, 76, 138);
+    box-shadow: 0 4px 8px 0 rgba(132, 130, 130, 0.19), 0 6px 20px 0 rgba(132, 130, 130, 0.19);
+}
+
+form fieldset {
+    display: flex;
+    width: 330px;
+    height: 25px;
+    gap: 10px;
+    border: 5px solid rgba(202, 37, 37, 0.59);
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+#exit {
+    background-color: rgb(239, 83, 83);
+    color: black;
+    font-size: large;
+    font-weight: 900;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    width: 50px;
+    border: 4px solid black;
+    border-radius: 10px;
+}
+#exit:hover{
+    background-color: rgb(239, 57, 57);
+}
+
+#submit {
+    background-color: rgb(51, 109, 197);
+    color: white;
+    font-size: large;
+    font-weight: 900;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+}
+#submit:hover{
+    background-color: rgb(35, 76, 138);
 }
